@@ -88,14 +88,15 @@ Modern, responsive registration form with real-time **client-side validation** a
 
 ## 📂 Project Structure
 registration-system/
-├── index.html              # Main registration form page
-├── style.css               # All styling & responsive design
-├── script.js               # Client-side validation & dynamic logic
-├── RegistrationTest.java   # Selenium automation test script
-├── screenshots/            # Captured test screenshots
-│   ├── screen shot1.png    # Error / validation failure state
-│   └── screen shot2.png    # Successful registration state
-└── README.md               # This documentation file
+├── index.html                 # Main registration form page
+├── style.css                  # All styling & responsive design
+├── script.js                  # Client-side validation & dynamic logic
+├── RegistrationTest.java      # Selenium automation test script
+├── screenshots/               # Captured test screenshots
+│   ├── screen shot1.png       # Error / validation failure state
+│   └── screen shot2.png       # Successful registration state
+└── README.md                  # This documentation file
+
 
 
 ## ▶️ How to Run
