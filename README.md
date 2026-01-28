@@ -18,14 +18,14 @@ The goal of this project is to demonstrate:
 
 ## 📂 Project Structure
 registration-system/
-├── index.html
-├── style.css
-├── script.js
-├── RegistrationTest.java
+├── index.html # Registration form UI
+├── style.css # Styling & responsive design
+├── script.js # Client-side validation & logic
+├── RegistrationTest.java # Selenium automation script
 ├── screenshots/
 │ ├── screen shot1.png
 │ └── screen shot2.png
-└── README.md
+└── README.md # Project documentation
 
 
 ---
@@ -60,47 +60,70 @@ registration-system/
 
 ---
 
+## 🎯 User Feedback
+- Inline error messages for invalid fields  
+- Top-level error feedback  
+- Success message on successful registration:  
+  - **"Registration Successful!"**  
+- Form resets after successful submission  
+
+---
+
+## 🔄 Dynamic Dropdown Logic
+- Country selection updates State options  
+- State selection updates City options  
+- JavaScript event-based DOM updates  
+
+---
+
 ## 🤖 Automation Testing (Selenium)
 
+### 🛠 Tools & Technologies
+- Selenium WebDriver  
+- Java  
+- Chrome Browser  
+- Selenium Manager (no manual driver setup)  
+
+---
+
+## 🔁 Automated Test Scenarios
+
 ### 🔴 Automation Flow A — Negative Scenario
-**Missing required Last Name field**
-
-<p align="center">
-  <img src="https://github.com/jyothir-369/Registration-Form-Automation/blob/main/screenshots/screen%20shot1.png" width="70%" />
-</p>
-
-**Validated:**
-- Inline error message displayed  
-- Field highlighted in red  
-- Form submission blocked  
+1. Launch the web page  
+2. Print Page URL and Page Title  
+3. Fill the form with missing Last Name  
+4. Submit the form  
+5. Validate:  
+   - Error message for missing Last Name  
+   - Error field highlighting  
+6. Capture screenshot: `screen shot1.png`  
 
 ---
 
 ### 🟢 Automation Flow B — Positive Scenario
-**Successful form submission with valid inputs**
-
-<p align="center">
-  <img src="https://github.com/jyothir-369/Registration-Form-Automation/blob/main/screenshots/screen%20shot2.png" width="70%" />
-</p>
-
-**Validated:**
-- Success message displayed  
-- Form reset after submission  
+1. Fill the form with all valid data  
+2. Ensure Password & Confirm Password match  
+3. Accept Terms & Conditions  
+4. Submit the form  
+5. Validate:  
+   - Success message appears  
+   - Form fields are reset  
+6. Capture screenshot: `screen shot2.png`  
 
 ---
 
 ### 🟡 Automation Flow C — Form Logic Validation
-- Country → State dropdown updates  
-- State → City dropdown updates  
-- Password strength validation  
-- Confirm password mismatch validation  
-- Submit button disabled until form is valid  
+1. Change Country → verify State dropdown updates  
+2. Change State → verify City dropdown updates  
+3. Validate password strength behavior  
+4. Test incorrect Confirm Password error  
+5. Verify submit button is disabled until form is valid  
 
 ---
 
 ## ⏳ Synchronization Handling
-- Explicit waits (`WebDriverWait`) instead of `Thread.sleep`  
-- Stable handling of dynamic UI elements  
+- Explicit waits (`WebDriverWait`) are used instead of `Thread.sleep`  
+- Ensures stable automation for dynamic dropdown updates  
 
 ---
 
@@ -108,34 +131,43 @@ registration-system/
 
 ### 🔹 Run UI Manually
 1. Open `index.html` in any modern browser  
-2. Test validations and dropdown behavior  
+2. Fill the form and test validations  
 
 ### 🔹 Run Automation Script
 1. Ensure Java is installed  
-2. Open project in IntelliJ / Eclipse  
+2. Open the project in an IDE (IntelliJ / Eclipse)  
 3. Run `RegistrationTest.java`  
-4. Chrome launches automatically  
-5. Screenshots captured during execution  
+4. Chrome browser will launch automatically  
+5. Screenshots will be captured during execution  
+
+---
+
+## 📸 Screenshots
+- `screenshots/screen shot1.png` (Error State)  
+- `screenshots/screen shot2.png` (Success State)  
 
 ---
 
 ## 🎥 Demo Video
-A recorded video demonstrating the automation execution is included in the submission.
+A screen recording demonstrating the automation execution is included with the submission.
 
 ---
 
 ## 🏁 Conclusion
 This project demonstrates:
-- Professional UI design  
-- Strong client-side validation logic  
-- Real-world Selenium automation practices  
+- Clean UI design  
+- Robust client-side validation  
+- Dynamic form logic  
+- Reliable Selenium automation  
+
+It closely follows real-world QA and UI automation practices.
 
 ---
 
 ## ✨ Bonus Enhancements
 - Modern UI with animations  
 - Glassmorphism form design  
-- Responsive layout  
+- Responsive layout for mobile devices  
 
 ---
 
