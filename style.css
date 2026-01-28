@@ -1,0 +1,196 @@
+/* ===== Reset & Base ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* ===== Container (Glass Effect) ===== */
+.container {
+    width: 100%;
+    max-width: 520px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 40px 35px;
+    border-radius: 18px;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.25);
+    animation: slideUp 0.7s ease;
+}
+
+/* ===== Heading ===== */
+.container h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #2d2d2d;
+}
+
+/* ===== Input Groups ===== */
+.input-group {
+    position: relative;
+    margin-bottom: 22px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1.5px solid #dcdcdc;
+    font-size: 14px;
+    background: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102,126,234,0.15);
+}
+
+/* ===== Floating Labels ===== */
+.input-group > input + label {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.3s;
+    background: #fff;
+    padding: 0 6px;
+}
+
+.input-group > input:focus + label,
+.input-group > input:not(:placeholder-shown) + label {
+    top: -8px;
+    font-size: 12px;
+    color: #667eea;
+}
+
+/* ===== Gender ===== */
+.group-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.gender {
+    display: flex;
+    gap: 14px;
+}
+
+.gender label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: 1.5px solid #ccc;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.gender input {
+    accent-color: #667eea;
+}
+
+.gender label:hover {
+    border-color: #667eea;
+}
+
+/* ===== Terms ===== */
+.terms label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* ===== Button ===== */
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102,126,234,0.4);
+}
+
+button:disabled {
+    background: #b0b0b0;
+    cursor: not-allowed;
+}
+
+/* ===== Errors & Success ===== */
+.error {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.form-error {
+    color: #e74c3c;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.success {
+    color: #27ae60;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* ===== Password Strength ===== */
+#strength {
+    height: 6px;
+    border-radius: 6px;
+    background: #eee;
+    margin-top: 8px;
+    transition: 0.3s;
+}
+
+/* ===== Animations ===== */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 550px) {
+    .container {
+        padding: 30px 22px;
+    }
+}
