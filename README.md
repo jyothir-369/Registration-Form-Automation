@@ -1,154 +1,175 @@
 <p align="center">
-  <img src="screenshots/screenshot1.png" alt="Form with validation errors" width="45%" />
-  <img src="screenshots/screenshot2.png" alt="Successful registration" width="45%" />
-  <br><br>
-  <b>Intelligent Registration System</b>
+  <img src="https://github.com/jyothir-369/Registration-Form-Automation/blob/main/screenshots/screen%20shot1.png" width="45%" />
+  <img src="https://github.com/jyothir-369/Registration-Form-Automation/blob/main/screenshots/screen%20shot2.png" width="45%" />
 </p>
 
-<h1 align="center">Intelligent Registration System</h1>
-
-<p align="center">
-  <a href="https://github.com/jyothir-369/Registration-Form-Automation/stargazers">
-    <img src="https://img.shields.io/github/stars/jyothir-369/Registration-Form-Automation?style=social" alt="GitHub stars">
-  </a>
-  <a href="https://github.com/jyothir-369/Registration-Form-Automation/fork">
-    <img src="https://img.shields.io/github/forks/jyothir-369/Registration-Form-Automation?style=social" alt="GitHub forks">
-  </a>
-</p>
+# Intelligent Registration System
 
 ## 📌 Project Overview
+This project is a modern, responsive **Registration System** built using **HTML, CSS, and JavaScript**, with complete **client-side validations** and **automation testing using Selenium WebDriver (Java)**.
 
-A modern, responsive **Registration Form** with comprehensive **client-side validation** (HTML, CSS, JavaScript) and **end-to-end automation testing** using **Selenium WebDriver (Java)**.
-
-**Key demonstration areas:**
-- Clean & modern UI development
-- Robust client-side form validation
-- Dynamic & dependent dropdowns
-- Professional Selenium automation with screenshots
+The goal of this project is to demonstrate:
+- UI development skills  
+- Client-side validation logic  
+- Dynamic form behavior  
+- End-to-end UI automation  
 
 ---
 
 ## 📂 Project Structure
 registration-system/
-├── index.html          # Main registration form
-├── style.css           # Styling & responsive design (glassmorphism + animations)
-├── script.js           # Form validation, dynamic dropdowns, password strength
-├── RegistrationTest.java  # Selenium WebDriver automation script (Java)
+├── index.html # Registration form UI
+├── style.css # Styling & responsive design
+├── script.js # Client-side validation & logic
+├── RegistrationTest.java # Selenium automation script
 ├── screenshots/
-│   ├── screenshot1.png    # Error state example
-│   └── screenshot2.png    # Success state example
-└── README.md
-text---
+│ ├── screen shot1.png
+│ └── screen shot2.png
+└── README.md # Project documentation
 
-## 🧩 Features
 
-### Form Fields
-- First Name (required)
-- Last Name (required)
-- Email (required, format + disposable domain check)
-- Phone Number (required, country-based format)
-- Age
-- Gender (Male / Female / Other)
-- Address
-- Country (dropdown)
-- State (dynamic dropdown)
-- City (dynamic dropdown)
-- Password + Confirm Password
-- Terms & Conditions checkbox (required)
+---
 
-### Client-Side Validations
-- Required field checks
-- Real-time inline error messages + field highlighting
-- Submit button disabled until form is valid
-- Email format + disposable domain blocking
-- Phone number format validation (based on country)
-- Password strength meter (Weak / Medium / Strong)
-- Confirm Password matching check
+## 🧩 Features Implemented
 
-### User Experience
-- Instant inline + top-level feedback
-- **"Registration Successful!"** message on submit
-- Form auto-reset after success
-- Smooth animations & glassmorphism design
-- Fully responsive (mobile-friendly)
+### 🔹 Registration Form Fields
+- First Name (Required)  
+- Last Name (Required)  
+- Email (Required)  
+- Phone Number (Required)  
+- Age  
+- Gender (Male / Female / Other)  
+- Address  
+- Country (Dropdown)  
+- State (Dynamic Dropdown)  
+- City (Dynamic Dropdown)  
+- Password  
+- Confirm Password  
+- Terms & Conditions (Required)  
 
-### Dynamic Behavior
-- Country → auto-populates State dropdown
-- State → auto-populates City dropdown
-- Event-driven JavaScript updates
+---
+
+## ✅ Client-Side Validations
+- Required fields validation  
+- Inline error messages with red highlight  
+- Submit button disabled until form is valid  
+- Email validation (blocks disposable domains)  
+- Phone number validation based on selected country  
+- Password strength meter (Weak / Medium / Strong)  
+- Password & Confirm Password matching validation  
+
+---
+
+## 🎯 User Feedback
+- Inline error messages for invalid fields  
+- Top-level error feedback  
+- Success message on successful registration:  
+  - **"Registration Successful!"**  
+- Form resets after successful submission  
+
+---
+
+## 🔄 Dynamic Dropdown Logic
+- Country selection updates State options  
+- State selection updates City options  
+- JavaScript event-based DOM updates  
 
 ---
 
 ## 🤖 Automation Testing (Selenium)
 
-**Tech stack:**
-- Selenium WebDriver (Java)
-- Chrome Browser
-- Selenium Manager (auto driver management – no manual setup)
-
-### Test Scenarios Covered
-
-**Negative Flow (Flow A)**  
-→ Missing required field (Last Name)  
-→ Validates error message & field highlight  
-→ Captures `screenshot1.png`
-
-**Positive Flow (Flow B)**  
-→ Complete valid data entry  
-→ Password match + Terms accepted  
-→ Validates success message + form reset  
-→ Captures `screenshot2.png`
-
-**Logic Validation (Flow C)**  
-- Country/State/City dependency checks
-- Password strength indicator behavior
-- Mismatched confirm password error
-- Submit button disabled/enabled logic
-
-**Good practices used:**
-- Explicit waits (`WebDriverWait`) instead of `Thread.sleep`
-- Stable handling of dynamic elements
+### 🛠 Tools & Technologies
+- Selenium WebDriver  
+- Java  
+- Chrome Browser  
+- Selenium Manager (no manual driver setup)  
 
 ---
 
-## ▶️ How to Run
+## 🔁 Automated Test Scenarios
 
-### 1. View & Test the Form Manually
-```bash
-# Just open in browser
-open index.html    # macOS
-start index.html   # Windows
-xdg-open index.html # Linux
-2. Run Selenium Automation
-Prerequisites:
+### 🔴 Automation Flow A — Negative Scenario
+1. Launch the web page  
+2. Print Page URL and Page Title  
+3. Fill the form with missing Last Name  
+4. Submit the form  
+5. Validate:  
+   - Error message for missing Last Name  
+   - Error field highlighting  
+6. Capture screenshot: `screen shot1.png`  
 
-Java 8+ installed
-Any IDE (IntelliJ IDEA / Eclipse recommended)
+---
 
-Steps:
+### 🟢 Automation Flow B — Positive Scenario
+1. Fill the form with all valid data  
+2. Ensure Password & Confirm Password match  
+3. Accept Terms & Conditions  
+4. Submit the form  
+5. Validate:  
+   - Success message appears  
+   - Form fields are reset  
+6. Capture screenshot: `screen shot2.png`  
 
-Open project in IDE
-Run RegistrationTest.java as a Java application
-Chrome browser opens automatically
-Automation executes → screenshots saved in /screenshots/
+---
 
+### 🟡 Automation Flow C — Form Logic Validation
+1. Change Country → verify State dropdown updates  
+2. Change State → verify City dropdown updates  
+3. Validate password strength behavior  
+4. Test incorrect Confirm Password error  
+5. Verify submit button is disabled until form is valid  
 
-📸 Screenshots
-Error StateSuccess Statescreenshots/screenshot1.pngscreenshots/screenshot2.png
+---
 
-🎥 Demo
-A short screen recording showing the full automation flow (positive + negative scenarios) is included in the submission / repository.
+## ⏳ Synchronization Handling
+- Explicit waits (`WebDriverWait`) are used instead of `Thread.sleep`  
+- Ensures stable automation for dynamic dropdown updates  
 
-🏁 Summary
-This project showcases:
+---
 
-Modern, responsive UI with animations
-Production-grade client-side validation
-Dynamic form logic
-Reliable, real-world Selenium automation practices
+## ▶️ How to Run the Project
 
-Great for portfolios, interview demos, or learning QA + front-end automation.
+### 🔹 Run UI Manually
+1. Open `index.html` in any modern browser  
+2. Fill the form and test validations  
 
-Author: Jyothir Raghavalu Bhogi
-GitHub: jyothir-369
-Repository: Registration-Form-Automation
+### 🔹 Run Automation Script
+1. Ensure Java is installed  
+2. Open the project in an IDE (IntelliJ / Eclipse)  
+3. Run `RegistrationTest.java`  
+4. Chrome browser will launch automatically  
+5. Screenshots will be captured during execution  
+
+---
+
+## 📸 Screenshots
+- `screenshots/screen shot1.png` (Error State)  
+- `screenshots/screen shot2.png` (Success State)  
+
+---
+
+## 🎥 Demo Video
+A screen recording demonstrating the automation execution is included with the submission.
+
+---
+
+## 🏁 Conclusion
+This project demonstrates:
+- Clean UI design  
+- Robust client-side validation  
+- Dynamic form logic  
+- Reliable Selenium automation  
+
+It closely follows real-world QA and UI automation practices.
+
+---
+
+## ✨ Bonus Enhancements
+- Modern UI with animations  
+- Glassmorphism form design  
+- Responsive layout for mobile devices  
+
+---
+
+**Author:** Jyothir Raghavalu Bhogi  
+**GitHub:** https://github.com/jyothir-369
