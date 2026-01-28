@@ -87,6 +87,7 @@ Modern, responsive registration form with real-time **client-side validation** a
 - Chrome Browser
 
 ## 📂 Project Structure
+```
 registration-system/
 ├── index.html                 # Main registration form page
 ├── style.css                  # All styling & responsive design
@@ -96,6 +97,8 @@ registration-system/
 │   ├── screen shot1.png       # Error / validation failure state
 │   └── screen shot2.png       # Successful registration state
 └── README.md                  # This documentation file
+```
+
 
 
 
