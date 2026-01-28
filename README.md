@@ -1,77 +1,78 @@
-<p align="center">
-  <img src="https://github.com/jyothir-369/Registration-Form-Automation/blob/main/screenshots/screen%20shot1.png" width="45%" alt="Error State" />
-  <img src="https://github.com/jyothir-369/Registration-Form-Automation/blob/main/screenshots/screen%20shot2.png" width="45%" alt="Success State" />
-</p>
-
 # Intelligent Registration System
 
-Modern, responsive **registration form** with real-time client-side validation and **end-to-end Selenium automation testing**.
+Modern, responsive registration form with real-time **client-side validation** and **end-to-end Selenium WebDriver automation** (Java).
 
-## ✨ Features
+<p align="center">
+  <strong>Beautiful UI + Robust Validation + Reliable Automation</strong>
+</p>
+
+## ✨ Key Features
 
 ### Form Fields
 - First Name (required)
 - Last Name (required)
 - Email (required, disposable domains blocked)
-- Phone Number (required, country-specific format)
+- Phone Number (required, country-specific format validation)
 - Age
 - Gender (Male / Female / Other)
 - Address
 - Country (dropdown)
 - State (dynamic dropdown)
 - City (dynamic dropdown)
-- Password + Confirm Password
-- Terms & Conditions checkbox (required)
+- Password
+- Confirm Password
+- Terms & Conditions (checkbox – required)
 
 ### Client-Side Validations
-- Required field checks
-- Real-time inline error messages + field highlighting
-- Submit button disabled until form is valid
+- Required fields check
+- Real-time inline error messages + red field highlighting
+- Submit button disabled until form is 100% valid
 - Email format + disposable domain detection
-- Phone number validation (based on selected country)
-- Password strength meter (Weak / Medium / Strong)
-- Password matching validation
-- Form reset after successful submission
+- Phone number validation based on selected country
+- Password strength meter (Weak / Medium / Strong) with visual indicator
+- Confirm Password matching validation
+- Form resets automatically after successful submission
 
-### Dynamic Behavior
-- Country → updates available States
-- State → updates available Cities
-- Password strength visualization
+### Dynamic & Interactive Behavior
+- Country selection → updates State dropdown
+- State selection → updates City dropdown
+- Live password strength feedback
 - Real-time form validity status
 
 ### User Feedback
-- Inline red error messages
-- Top-level summary message
-- Success toast: **"Registration Successful!"**
+- Inline red error messages for each invalid field
+- Top-level success/error notification
+- Success message: **"Registration Successful!"**
 
 ## 🤖 Automation Testing (Selenium + Java)
 
-### Implemented Test Flows
+### Test Scenarios
 
-**Flow A – Negative Case**  
+**Negative Scenario**  
 - Submit form with missing Last Name  
-- Verify: error message + field highlight  
-- Screenshot: `screen shot1.png`
+- Verify error message and field highlighting  
+- Screenshot captured: `screen shot1.png`
 
-**Flow B – Positive Case (Happy Path)**  
+**Positive Scenario (Happy Path)**  
 - Fill all fields with valid data  
-- Accept terms  
-- Submit → verify success message & form reset  
-- Screenshot: `screen shot2.png`
+- Password & Confirm Password match  
+- Accept Terms & Conditions  
+- Submit → verify success message + form reset  
+- Screenshot captured: `screen shot2.png`
 
-**Flow C – Form Logic & UI Validation**  
+**Form Logic & UI Validation**  
 - Country → State dropdown population  
 - State → City dropdown population  
-- Password strength indicator behavior  
-- Mismatched confirm password error  
-- Submit button disabled/enabled correctly
+- Password strength indicator updates correctly  
+- Mismatched Confirm Password shows error  
+- Submit button disabled/enabled in real-time
 
 ### Automation Highlights
-- Uses **Selenium WebDriver + Java**
-- **Explicit waits** (`WebDriverWait`) – no `Thread.sleep()`
-- Selenium Manager (auto driver handling)
-- Screenshot capture on key steps
+- Selenium WebDriver + Java
+- Explicit waits (`WebDriverWait`) – no `Thread.sleep()`
+- Automatic ChromeDriver management (Selenium Manager)
 - Page title & URL verification
+- Screenshots on key validation points
 
 ## 🛠 Tech Stack
 
@@ -87,46 +88,42 @@ Modern, responsive **registration form** with real-time client-side validation a
 
 ## 📂 Project Structure
 registration-system/
-├── index.html          # Main registration form
-├── style.css           # Styles & responsive design
-├── script.js           # Form logic & validations
-├── RegistrationTest.java # Selenium test script
-├── screenshots/
-│   ├── screen shot1.png    # Error case
-│   └── screen shot2.png    # Success case
-└── README.md
-text## ▶️ How to Run
+├── index.html                  # Main registration form page
+├── style.css                   # All styling & responsive design
+├── script.js                   # Client-side validation & dynamic logic
+├── RegistrationTest.java       # Selenium automation test script
+├── screenshots/                # Captured test screenshots
+│   ├── screen shot1.png        # Error / validation failure state
+│   └── screen shot2.png        # Successful registration state
+└── README.md                   # This documentation file
 
-### 1. Open the Form (Manual Testing)
 
-Just double-click `index.html` or open it with any modern browser.
+## ▶️ How to Run
+
+### 1. Manual Testing (UI)
+1. Open `index.html` in any modern browser  
+2. Fill the form and test validations
 
 ### 2. Run Automation Tests
-
-**Prerequisites**
-- Java 8+ installed
+**Requirements**
+- Java 8 or higher installed
 - Internet connection (first run downloads ChromeDriver)
 
 **Steps**
-1. Open project in IntelliJ / Eclipse / VS Code
-2. Right-click → Run `RegistrationTest.java`
-3. Watch Chrome launch and execute tests automatically
-4. Check console output + `screenshots/` folder
-
-## 🎥 Demo
-
-A short screen recording showing the automation flow is included in the submission.
+1. Open the project folder in IntelliJ IDEA, Eclipse, or VS Code
+2. Run `RegistrationTest.java` as a Java application / test
+3. Chrome browser will launch automatically
+4. Tests will execute and save screenshots in `screenshots/`
 
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="https://github.com/jyothir-369/Registration-Form-Automation/blob/main/screenshots/screen%20shot1.png" width="48%" alt="Form with validation errors" />
-  <br><br>
-  <img src="https://github.com/jyothir-369/Registration-Form-Automation/blob/main/screenshots/screen%20shot2.png" width="48%" alt="Successful registration" />
+  <img src="https://github.com/jyothir-369/Registration-Form-Automation/blob/main/screenshots/screen%20shot1.png" width="48%" alt="Form with validation errors - Negative test case" /><br><br>
+  <img src="https://github.com/jyothir-369/Registration-Form-Automation/blob/main/screenshots/screen%20shot2.png" width="48%" alt="Successful registration - Positive test case" />
 </p>
 
 ---
 
 **Author:** Jyothir Raghavalu Bhogi  
-**GitHub:** https://github.com/jyothir-369  
-**Project Repo:** https://github.com/jyothir-369/Registration-Form-Automation
+**GitHub:** [@jyothir-369](https://github.com/jyothir-369)  
+**Repository:** [Registration-Form-Automation](https://github.com/jyothir-369/Registration-Form-Automation)
